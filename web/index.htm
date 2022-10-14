@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Web</title>
+  </head>
+  <body>
+    <main>
+        <div class="p-4">
+            <div class="row pt-2">
+                <h3>Pacientes</h3>
+                <div class="col-sm-12 msg"></div>
+                <div class="col-sm-4">
+                    <form class="form-paciente">
+                        <input class="form-control" type="text" name="id" hidden>
+                        <span id="id"></span>
+                        <div class="form-group mb-2">
+                            <label for="">Nombre *</label>
+                            <input class="form-control" type="text" name="name">
+                            <span id="name"></span>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="">Tipo de identificación *</label>
+                            <select class="form-control" name="id_type">
+                                <option value="">Seleccionar</option>
+                                <option value="Cedula de ciudadania">Cédula de ciudadanía</option>
+                                <option value="Tarjeta de identidad">Tarjeta de identidad</option>
+                            </select>
+                            <span id="id_type"></span>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="">Número de identificación *</label>
+                            <input class="form-control" type="number" name="identification_number">
+                            <span id="identification_number"></span>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="">Fecha de nacimiento *</label>
+                            <input class="form-control" type="date" name="birthday">
+                            <span id="birthday"></span>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="">Peso (kg) *</label>
+                            <input class="form-control" type="number" name="weight">
+                            <span id="weight"></span>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="">Talla (cm)*</label>
+                            <input class="form-control" type="number" name="size">
+                            <span id="size"></span>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary btn-block btn-save">Guardar</button>
+                            <button class="btn btn-danger btn-block btn-clear" type="button">Limpiar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-8">
+                    <div class="table-responsive">
+                        <div class="mb-3">
+                            <label for="">Buscar</label>
+                            <input class="form-control input-search" type="search" name="key">
+                        </div>
+                        <table class="table table-hover table-condensed table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Tipo identificación</th>
+                                    <th>Documento</th>
+                                    <th>Fecha nacimiento</th>
+                                    <th>Peso</th>
+                                    <th>Talla</th>
+                                    <th>IMC</th>
+                                    <th>Edad</th>
+                                    <th colspan="2" class="text-center">Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody class="list"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
